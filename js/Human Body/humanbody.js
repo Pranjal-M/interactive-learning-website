@@ -1,0 +1,74 @@
+function tutorial() {
+	$('#tutorial1').modal('show');
+	$("#dyk-text").load("test.txt");
+}
+$("#tut-y").click(function(){
+	$(".modal-footer").html($(".modal-footer").html().replace('Yes','Next'));
+	$(".modal-footer").html($(".modal-footer").html().replace('No','Close'));
+	$("#tut-title").addClass("hidden");
+	$("#tut-vid").removeClass("hidden");
+})
+$("#dyk-close-btn").click(function(){
+	$("#dyk").fadeOut("normal", function() {
+        $(this).remove();
+    });
+	$("#dyk-close-btn").fadeOut("normal", function() {
+        $(this).remove();
+    });
+})
+$("#gender").click(function(){
+	if(!$("#gender").prop("checked"))
+	{
+		$("#image").attr({src:"images/Human Body/male/male_1.png", usemap:"#m1"});
+		$(".gender-icon").attr("src","images/icons/male.png");
+	}
+	else
+	{
+		$("#image").attr({src:"images/Human Body/female/Female_1.png", usemap:"#w1"});
+		$(".gender-icon").attr("src", "images/icons/female.png");
+	}
+});
+$("#half-skull").click(function(){
+	$("#half-skull").addClass("hidden");	
+	$("#half-brain").addClass("hidden");
+	$("#skull").removeClass("hidden");
+});
+$("#half-brain").click(function(){
+	$("#half-skull").addClass("hidden");	
+	$("#half-brain").addClass("hidden");
+	$("#brain").removeClass("hidden");
+});
+$("#half-biceps").click(function(){
+	$("#half-humerus-a").addClass("hidden");	
+	$("#half-biceps").addClass("hidden");
+	$("#biceps").removeClass("hidden");
+});
+$("#half-humerus-a").click(function(){
+	$("#half-humerus-a").addClass("hidden");	
+	$("#half-biceps").addClass("hidden");
+	$("#humerus-a").removeClass("hidden");
+});
+$("#half-forearm-muscles-a").click(function(){
+	$("#half-radius-ulna-a").addClass("hidden");	
+	$("#half-forearm-muscles-a").addClass("hidden");
+	$("#forearm-muscles-a").removeClass("hidden");
+});
+$("#half-radius-ulna-a").click(function(){
+	$("#half-radius-ulna-a").addClass("hidden");	
+	$("#half-forearm-muscles-a").addClass("hidden");
+	$("#radius-ulna-a").removeClass("hidden");
+});
+$(".modal-back").click(function(){
+	$("#half-skull").removeClass("hidden");	
+	$("#half-brain").removeClass("hidden");
+	$("#half-humerus-a").removeClass("hidden");	
+	$("#half-biceps").removeClass("hidden");
+	$("#half-radius-ulna-a").removeClass("hidden");	
+	$("#half-forearm-muscles-a").removeClass("hidden");
+	$("#skull").addClass("hidden");
+	$("#brain").addClass("hidden");
+	$("#biceps").addClass("hidden");
+	$("#humerus-a").addClass("hidden");
+	$("#radius-ulna-a").addClass("hidden");
+	$("#forearm-muscles-a").addClass("hidden");
+});

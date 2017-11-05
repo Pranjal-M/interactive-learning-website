@@ -1,0 +1,52 @@
+body{
+	background-color: dimgrey;
+}
+h1{
+	text-align: left;
+	color: #fff;
+}
+.header{
+	height: 80px;
+}
+.footer > .col-md-2 > a{
+	color: #000;
+	text-decoration: none;
+}
+.footer > .col-md-2 > p{
+	color: #000;
+	padding-top: 10%;
+	font-weight: 600;
+	font-size: 16px;
+}
+.nav-pills > li > a{
+	color: #22a7f0;
+	font-size: 20px;
+	font-weight: 600;
+}
+.nav-pills > li > a:hover, .nav-pills > li > a:focus, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus, .nav > li > a.active{
+	background-color: #000;
+	color: #fff;
+}
+.dropdown-menu{
+	font-size: 18px;
+}
+.col-md-3{
+	padding: 0;
+}
+.col-md-3:hover{
+	z-index: 2;
+	transition: all 200ms ease-in;
+	box-shadow: 0px 0px 10px 0.8px #333;
+}
+.tl:hover{
+    transform: scale(1.1) translateX(-15px) translateY(-10px);
+}
+.tr:hover{
+    transform: scale(1.1) translateX(15px) translateY(-10px);
+}
+.bl:hover{
+    transform: scale(1.1) translateX(-15px) translateY(10px);
+}
+.br:hover{
+    transform: scale(1.1) translateX(15px) translateY(10px);
+}

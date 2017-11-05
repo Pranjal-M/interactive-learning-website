@@ -1,0 +1,130 @@
+video{
+	width: 60%;
+}
+body{
+	background: #00c6ff; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #00c6ff, #0072ff); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+.domain-module-bg{
+	background-color: white;
+	width: 80%; 
+	margin: 5%;
+	position: relative;
+	left: 7.5%;
+	border-radius: 20px;
+}
+.module-name{
+	text-align: center; 
+	padding-top:5%;
+	font-size: 25px;
+	font-weight: bold;
+}
+.module-link{
+	text-align: center;
+	font-size:20px;
+	text-decoration: none;
+	margin-bottom: 0px;
+}
+.content-circle{
+	position: relative;
+	top: 18vh;
+	margin: auto;
+	height: 70vh;
+	width: 70vh;
+	border-radius: 50%;
+	box-shadow: 0px 0px 20px -3px #000;
+	overflow: hidden;
+}
+#left-semi, #right-semi{
+	position: relative;
+	height: 70vh;
+	width: 35vh;
+	background-color: #fff;
+	transition: border-radius 600ms, width 600ms ;
+	z-index: 1;
+	color: #000;
+	border: 0.5px solid #000;
+}
+#left-semi{
+	float: left;
+	border-radius: 35vh 0 0 35vh;
+	text-align: right;
+}
+#right-semi{
+	float: right;
+	border-radius: 0 35vh 35vh 0;
+}
+.title{
+	font-weight: bold;
+	font-size: 8vh;
+	line-height: 1;
+	padding: 76% 5%;
+}
+.desc{
+	text-align: center;
+	padding: 3% 10% 0;
+	color: #fff;
+}
+.interact-btn{
+	border-radius: 10px;
+	font-size: 2.5vh;
+	font-weight:bold;
+	padding: 10px;
+	width: 30vh;
+	text-align: center;
+	border: 1px white solid;
+	margin: auto;
+	margin-top: 5%;
+}
+#sub-modules-1-trigger, #sub-modules-2-trigger{
+	font-weight:bold;
+	font-size: 2.5vh;
+	padding: 1.8vh;
+	width: 100%;
+	text-align: center;
+	background-color: #fff;
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	color: #000;
+}
+#sub-modules-1-trigger:hover, #sub-modules-2-trigger:hover{
+	background-color: rgba(255,190,26,0.89);
+}
+#left-semi:hover, #right-semi:hover, .interact-btn:hover{
+	z-index: 2;
+	cursor: pointer;
+	background-color:#fff;	
+	color: #000;
+}
+.close{
+	position: absolute;
+	top: 20vh;
+	left: 35%;
+	z-index: 3;
+}
+@media (max-height:600px){
+	.desc{
+		display:none;
+	}
+	.learn-btn{
+		margin-top: 20%;
+	}
+}
+#top{
+	position: fixed;
+	top: auto;
+	bottom: 0;
+	left: 10px;
+	background-color: rgba(0,0,0,0.7);
+	color: #fff;
+	padding: 13px 10px;
+	height: 80px;
+	width: 80px;
+	font-size: 30px;
+	border-radius: 10px 10px 0 0;
+	text-align: center;
+	font-family: 'Open Sans', 'GLYPHICONS Halflings', sans-serif;
+	cursor: pointer;
+}

@@ -1,0 +1,79 @@
+.module-bg{
+	margin-top: 90vh;
+}
+.heading_box{
+	background-color: rgba(0,0,0,0.9);
+	z-index: 1;
+	color: #fff;
+	text-align: center;
+	width: 80%;
+	position: relative;
+	top: 25vh;
+	left: 12.5%;
+	padding: 2% 5%;
+	box-shadow: 0px 0px 25px 0.1px rgba(255,255,255,0.5);
+	border-radius: 20px;
+}
+.module_head{
+	font-weight:700;
+	text-transform: uppercase;
+	letter-spacing: 30px;
+	font-size: 70px;
+}
+.module_desc{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 20px;
+	line-height: 1.6;
+	text-align: justify;
+}
+.more{
+	position: relative;
+	left: 42%;
+	top: 40vh;
+	width: 240px;
+	height: 60px;
+	background-color: rgba(0,0,0,0.9);
+	border-radius: 5px;
+	font-size: 20px;
+	color: #fff;	
+	border: 1px solid white;
+}
+.more:hover{
+	background-color: rgba(255,190,26,0.89);
+	color: #000;
+}
+.more>p{
+	font-family: 'Quicksand', sans-serif;
+	padding-top: 6.5%;
+	text-align: center;
+	text-decoration: none;
+}
+.sub_modules{
+	color: #fff;
+	background-color: rgba(255,255,255,0.9);
+	width:100%;
+	margin-top: 33vh;
+	padding: 6% 10% 6% 15%;
+}
+.square, .hrect, .vrect{
+	cursor: pointer;
+	margin: 40px 0;
+	padding: 1% 10%;
+	border-radius: 10px;
+}
+.square{
+	height: 200px;
+	width: 200px;
+}
+.hrect{
+	height: 200px;
+	width: 440px;
+}
+.vrect{
+	height: 440px;
+	width: 200px;
+}
+.square:hover, .hrect:hover, .vrect:hover{
+	transform: translate(5px, -5px);
+	box-shadow: -3px 3px 10px 0.5px rgba(0,0,0,0.5);
+}
