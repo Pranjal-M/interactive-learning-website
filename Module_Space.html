@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solar System Module</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/modules.css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+  	<div class="container-fluid">
+  		<div class="fullscreen-bg">
+       		<video loop muted autoplay class="fullscreen-bg_video" style="height: 100vh">
+        		<source src="videos/Universe.webm" type="video/webm">
+        		<source src="videos/Universe.mp4" type="video/mp4">
+    		</video>
+       	</div>
+       	<div class="row header">
+			<div class="col-md-1">
+				<input type="checkbox" class="hidden" id="nav-toggle"/>
+				<label for="nav-toggle">
+					<span class="glyphicon glyphicon-menu-hamburger menu-icon" aria-hidden="true" id="menu-icon" ></span>
+				</label>
+			</div>
+			<div class="col-md-2" style="padding: 0; margin: 0;"><h4>NAME</h4></div>
+		</div>
+		<div class="hidden navbar">
+			<ul class="sidemenu hidden">
+				<a href="index.html"><li><img src="images/icons/home.png">Home</li></a>
+				<a href="domain2.html"><li><img src="images/icons/atom2.png">Science</li></a>
+				<a href="#"><li><img src="images/icons/tech.png">Tech</li></a>
+				<a href="#"><li><img src="images/icons/world.png">World</li></a>
+				<a href="#"><li><img src="images/icons/Art.png">Arts</li></a>
+				<hr>
+
+			</ul>
+			<div class="social">
+				<p>S<br>O<br>C<br>I<br>A<br>L</p>
+			</div>
+		</div>
+   		<div class="row">
+    		<div class="col-md-12" style="padding: 0;">
+				<div class="heading_box">
+					<h1 class="module_head">SOLAR SYSTEM</h1>
+					<h3 class="module_desc">The Solar System is the gravitationally bound system comprising the Sun and the objects that orbit it, either directly or indirectly. Of those objects that orbit the Sun directly, the largest eight are the planets, with the remainder being significantly smaller objects, such as dwarf planets and small Solar System bodies.</h3>
+				</div>
+  				<a href="#3d_model"><div class="more"><p>Read More</p></div></a>
+   				<a href=""><img id="3d_model" src="images/Solar System/module-bg.png" width="100%" class="module-bg"></a>
+    			<div class="sub_modules">
+      				<div class="row">
+      					<div class="col-md-3 col-sm-3">
+							<div class="square" style="	background-color: #0093FF;">
+								<h3>The Sun ></h3>
+							</div>
+    						<div class="vrect" style="background-color: #5AAFFF;">
+								<h3>Comets ></h3>
+							</div>
+     					</div>
+     					<div class="col-md-3 col-sm-3 col-md-push-3 col-sm-push-3">
+    						<div class="square" style="background-color: #31C2FF; margin-top: 280px;">
+								<h3>The Moon ></h3>
+							</div>
+    						<div class="hrect" style="background-color: #31C2FF;">
+								<h3>Meteor Showers ></h3>
+							</div>
+     					</div>
+     					<div class="col-md-3 col-sm-3 col-md-pull-3 col-sm-pull-3">
+    						<div class="hrect" style="background-color: #31C2FF;">
+								<h3>Asteroid Belt ></h3>
+							</div>
+    						<div class="square" style="background-color: #31C2FF; ">
+								<h3>Solar<br>Eclipse ></h3>
+							</div>
+    						<div class="square" style="background-color: #31C2FF; ">
+								<h3>Meteorites ></h3>
+							</div>
+     					</div>
+     					<div class="col-md-3 col-sm-3">
+							<div class="vrect" style="background-color: #0093FF;">
+								<h3>Asteroids ></h3>
+							</div>
+     					</div>
+					</div>
+       			</div>
+      		</div>
+      	</div>
+    </div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<script src="js/bootstrap.js"></script>
+	<script src="js/main.js"></script>
+  </body>
+</html>
