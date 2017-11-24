@@ -16,7 +16,7 @@
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
   </head>
-	<body class="opening hide-UI view-2D zoom-large data-close controls-close">
+	<body class="view-3D zoom-large data-open controls-open">
 		<div class="row header">
 			<div class="col-md-1">
 				<input type="checkbox" class="hidden" id="nav-toggle"/>
@@ -65,6 +65,15 @@
 			</div>
 
 		</div>
+  		<div class="planet-details hidden">
+       		<div class="info">
+       		<button id="close-btn" class="glyphicon glyphicon-remove"></button>
+       			<p id="detail"></p>
+       		</div>
+       		<video loop muted autoplay id="planet-bg" class="fullscreen-bg_video">
+        		<source src="videos/Planets/mars.mp4" type="video/mp4">
+    		</video>
+    	</div>
 	  	<div id="data">
 		  <a class="sun" title="sun" href="#sunspeed">Sun</a>
 		  <a class="mercury" title="mercury" href="#mercuryspeed">Mercury</a>

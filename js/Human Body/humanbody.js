@@ -1,6 +1,6 @@
 function tutorial() {
 	$('#tutorial1').modal('show');
-	$("#dyk-text").load("test.txt");
+	$("#dyk-text").load("text/test.txt");
 }
 $("#tut-y").click(function(){
 	$(".modal-footer").html($(".modal-footer").html().replace('Yes','Next'));
@@ -29,41 +29,41 @@ $("#gender").click(function(){
 	}
 });
 $("#half-skull").click(function(){
-	$("#half-skull").addClass("hidden");	
+	$("#half-skull").addClass("hidden");
 	$("#half-brain").addClass("hidden");
 	$("#skull").removeClass("hidden");
 });
 $("#half-brain").click(function(){
-	$("#half-skull").addClass("hidden");	
+	$("#half-skull").addClass("hidden");
 	$("#half-brain").addClass("hidden");
 	$("#brain").removeClass("hidden");
 });
 $("#half-biceps").click(function(){
-	$("#half-humerus-a").addClass("hidden");	
+	$("#half-humerus-a").addClass("hidden");
 	$("#half-biceps").addClass("hidden");
 	$("#biceps").removeClass("hidden");
 });
 $("#half-humerus-a").click(function(){
-	$("#half-humerus-a").addClass("hidden");	
+	$("#half-humerus-a").addClass("hidden");
 	$("#half-biceps").addClass("hidden");
 	$("#humerus-a").removeClass("hidden");
 });
 $("#half-forearm-muscles-a").click(function(){
-	$("#half-radius-ulna-a").addClass("hidden");	
+	$("#half-radius-ulna-a").addClass("hidden");
 	$("#half-forearm-muscles-a").addClass("hidden");
 	$("#forearm-muscles-a").removeClass("hidden");
 });
 $("#half-radius-ulna-a").click(function(){
-	$("#half-radius-ulna-a").addClass("hidden");	
+	$("#half-radius-ulna-a").addClass("hidden");
 	$("#half-forearm-muscles-a").addClass("hidden");
 	$("#radius-ulna-a").removeClass("hidden");
 });
 $(".modal-back").click(function(){
-	$("#half-skull").removeClass("hidden");	
+	$("#half-skull").removeClass("hidden");
 	$("#half-brain").removeClass("hidden");
-	$("#half-humerus-a").removeClass("hidden");	
+	$("#half-humerus-a").removeClass("hidden");
 	$("#half-biceps").removeClass("hidden");
-	$("#half-radius-ulna-a").removeClass("hidden");	
+	$("#half-radius-ulna-a").removeClass("hidden");
 	$("#half-forearm-muscles-a").removeClass("hidden");
 	$("#skull").addClass("hidden");
 	$("#brain").addClass("hidden");

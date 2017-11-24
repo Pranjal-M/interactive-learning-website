@@ -1,0 +1,1 @@
+<img src="http://www.cs.cmu.edu/afs/cs/academic/class/15883-f13/lectures/cerebellum-anatomy/cerebellum.png" class="img-responsive" align="center"><br>The second largest part of the brain is the cerebellum, which sits beneath the back of the cerebrum. It is responsible for coordinating muscle movement and controlling our balance.
