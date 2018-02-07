@@ -8,6 +8,7 @@
 .container-fluid{
 	width: 100%;
 	padding: 0;
+	background-color: #ECECEC;
 }
 hr{
 	border: 0.5px solid #37474F;

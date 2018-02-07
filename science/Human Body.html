@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Human Body Module</title>
+    <!-- Bootstrap -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/humanbody.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+  	<div class="container-fluid">
+   		<div class="row header">
+       			<div class="col-md-1">
+					<input type="checkbox" class="hidden" id="nav-toggle"/>
+					<label for="nav-toggle">
+						<span class="glyphicon glyphicon-menu-hamburger menu-icon" aria-hidden="true" id="menu-icon" ></span>
+					</label>
+				</div>
+				<div class="col-md-2" style="padding: 0; margin: 0;"><h4>NAME</h4></div>
+			</div>
+		<div class="hidden navbar">
+			<ul class="sidemenu hidden">
+				<a href="index.html"><li><img src="images/icons/home.png">Home</li></a>
+				<a href="domain2.html"><li><img src="images/icons/atom-active2.png">Science</li></a>
+				<a href="#"><li><img src="images/icons/tech.png">Tech</li></a>
+				<a href="#"><li><img src="images/icons/world.png">World</li></a>
+				<a href="#"><li><img src="images/icons/Art.png">Arts</li></a>
+				<hr>
+				<a href="#"><li><img src="images/icons/about.png">About Us</li></a>
+				<a href="#"><li><img src="images/icons/contact.png">Contact Us</li></a>
+				<a href="#"><li><img src="images/icons/blog.png">Blog</li></a>
+			</ul>
+			<div class="social">
+				<p>S<br>O<br>C<br>I<br>A<br>L</p>
+			</div>
+		</div>
+		<div class="col-md-3 controls">
+			<div class="gender">
+				Gender
+				<div class="toggleWrapper">
+					<input type="checkbox" class="gender" id="gender"/>
+					<label for="gender" class="toggle">
+						<span class="toggle__handler">
+							<img src="../images/icons/male.png" class="gender-icon">							
+						</span>
+					</label>
+				</div>
+			</div>
+			<div class="contents">
+				<ul>
+					<li data-toggle="modal" data-target="#Head">Head</li>
+					<li>Arm</li>
+					<li>Forearm</li>
+					<li>Hand</li>
+					<li>Chest</li>
+					<li>Abdomen</li>
+					<li>Pelvic</li>
+					<li>Glute(Hip)</li>
+					<li>Thigh</li>
+					<li>Leg</li>
+					<li>Foot</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-2 col-md-offset-7">
+			<button id="dyk-close-btn" class="glyphicon glyphicon-remove"></button>
+			<div id="dyk" class="did-you-know">
+				<h3>DID YOU KNOW?</h3>
+				<p id="dyk-text"></p>
+			</div>
+		</div>
+		<div class="page_container">
+		  <div id="Body" class="interactive_3d"><img id="image" src="images/Human Body/male/male_1.png" usemap="#m1">
+		  </div>
+		</div>
+    </div>
+    <!--Maps-->
+    <map name="m1">
+		<area alt="face" title="Head" href="#" shape="poly" coords="168,24,187,2,209,1,233,19,240,55,238,81,201,105,171,95,162,76" data-toggle="modal" data-target="#Head"/>
+		<area alt="abs" title="Abdomen" href="#" shape="poly" coords="127,241,280,239,271,306,278,368,203,376,126,372" />
+		<area alt="chest" title="Chest" href="#" shape="poly" coords="128,235,279,233,289,203,275,158,242,140,204,143,165,140,123,161,117,199" />
+		<area alt="right bicep" title="Right Arm" data-toggle="modal" data-target="#ArmF" href="#" shape="poly" coords="122,151,113,203,123,238,124,270,113,303,90,299,73,279,80,210,81,174,99,151" />
+		<area alt="right arm" title="Right Forearm" data-toggle="modal" data-target="#ForearmF" href="#" shape="poly" coords="70,285,89,305,113,306,68,424,38,415" />
+		<area alt="right hand" title="Right Hand" href="#" shape="poly" coords="34,418,66,425,71,440,64,459,56,491,48,493,40,503,34,502,32,500,28,505,21,502,22,480,17,496,9,498,8,487,16,456,7,461,6,452,17,431" />
+		<area alt="left bicep" title="Left Arm" data-toggle="modal" data-target="#ArmF" href="#" shape="poly" coords="280,149,279,169,289,208,288,249,281,274,297,301,315,301,337,282,328,214,326,176,306,155" />
+		<area alt="left arm" title="Left Forearm" data-toggle="modal" data-target="#ForearmF" href="#" shape="poly" coords="296,312,313,307,342,292,368,417,341,426" />
+		<area alt="left hand" title="Left Hand" href="#" shape="poly" coords="335,425,368,416,387,431,397,454,396,459,387,455,388,464,394,481,394,498,388,499,382,494,381,503,375,505,368,495,367,498,363,504,353,489,353,492,346,492,337,454" />
+		<area alt="pelvic" title="Pelvic" href="#" shape="poly" coords="126,374,200,381,277,371,289,458,220,491,198,491,117,455" />
+		<area alt="right thigh" title="Right Thigh" href="#" shape="poly" coords="115,457,202,499,182,646,127,657,115,545" />
+		<area alt="right leg" title="Right Leg" href="#" shape="poly" coords="128,661,180,657,190,702,177,752,178,810,141,810,126,693" />
+		<area alt="right foot" title="Right Foot" href="#" shape="poly" coords="145,825,166,829,178,823,179,854,179,863,178,873,169,898,127,890,128,878" />
+		<area alt="left thigh" title="Left Thigh" href="#" shape="poly" coords="212,491,290,443,291,543,277,595,277,616,276,635,247,657,225,648,219,608,209,542" />
+		<area alt="left leg" title="Left Leg" href="#" shape="poly" coords="227,659,252,669,278,652,284,674,277,710,263,815,249,823,230,815,226,728,219,694" />
+		<area alt="left foot" title="Left Foot" href="#" shape="poly" coords="228,819,249,827,264,818,265,851,274,877,268,887,248,895,230,897,225,876" />
+	</map>
+	<map name="m2">
+		<area target="" alt="Right Arm" title="Right Arm" data-toggle="modal" data-target="#ArmF" href="#" coords="85,152,75,174,75,204,67,231,66,256,67,272,94,290,107,295,121,264,126,208,135,178,145,152,125,139,105,140" shape="poly">
+		<area target="" alt="Right Forearm" title="Right Forearm" data-toggle="modal" data-target="#ForearmF" href="#" coords="68,274,57,299,54,353,47,414,67,414,80,417,98,356,111,297" shape="poly">
+		<area target="" alt="Right Hand" title="Right Hand" href="#" coords="47,417,66,415,80,418,86,430,87,457,86,490,74,502,61,506,39,495,40,460,38,428" shape="poly">
+		<area target="" alt="Chest" title="Chest" href="#" coords="126,138,144,150,127,205,123,230,159,232,222,224,272,238,285,213,286,193,269,158,256,146,239,137,205,144,151,123" shape="poly">
+		<area target="" alt="Abdomen" title="Abdomen" href="#" coords="124,232,222,223,273,238,272,303,277,351,272,372,224,382,127,364,135,316,120,262" shape="poly">
+		<area target="" alt="Pelvic" title="Pelvic" href="#" coords="126,366,224,380,273,371,286,461,212,488,117,462" shape="poly">
+		<area target="" alt="Right Thigh" title="Right Thigh" href="#" coords="119,463,212,488,197,548,193,573,183,606,185,630,177,651,124,640,131,605,115,544" shape="poly">
+		<area target="" alt="Right Leg" title="Right Leg" href="#" coords="123,640,176,651,178,680,174,724,169,790,171,811,175,834,135,835,133,783,125,742,114,672" shape="poly">
+		<area target="" alt="Right Foot" title="Right Foot" href="#" coords="135,835,175,836,206,891,197,898,152,896,139,870,131,865" shape="poly">
+		<area target="" alt="Left Thigh" title="Left Thigh" href="#" coords="213,489,202,538,210,593,212,624,215,639,250,650,263,639,269,606,269,590,281,559,289,533,289,492,286,459" shape="poly">
+		<area target="" alt="Left Leg" title="Left Leg" href="#" coords="214,640,247,651,263,643,264,673,258,734,246,819,248,828,212,828,218,776,209,723,203,691" shape="poly">
+		<area target="" alt="Left Foot" title="Left Foot" href="#" coords="212,825,246,827,256,844,274,861,280,869,279,882,258,891,240,882,230,860,208,860,204,855" shape="poly">
+		<area target="" alt="Left Arm" title="Left Arm" data-toggle="modal" data-target="#ArmF" href="#" coords="274,239,285,213,286,194,264,153,289,163,305,192,304,233,310,282,317,296,300,305,271,309" shape="poly">
+		<area target="" alt="Left Forearm" title="Left Forearm" data-toggle="modal" data-target="#ForearmF" href="#" coords="271,310,298,303,315,296,336,376,348,414,320,426,301,382,274,338" shape="poly">
+		<area target="" alt="Left Hand" title="Left Hand" href="#" coords="321,425,347,415,370,430,387,454,370,454,387,488,374,501,359,496,346,486,330,461" shape="poly">
+		<area target="" alt="Head" title="Head" data-toggle="modal" data-target="#Head" href="#" coords="161,35,158,59,169,82,199,97,229,101,240,92,246,62,245,43,242,28,234,11,211,0,178,10" shape="poly">
+	</map>
+	<map name="m13">
+		<area target="" alt="Head" title="Head" data-toggle="modal" data-target="#Head" href="#" coords="183,1,160,18,153,42,154,64,156,91,163,102,184,104,209,96,221,76,235,69,241,54,236,27,211,6" shape="poly">
+		<area target="" alt="Chest" title="Chest" href="#" coords="137,153,115,204,123,238,163,233,239,232,267,230,265,206,264,175,260,150,274,133,243,123,195,144,165,132" shape="poly">
+		<area target="" alt="Abdomen" title="Abdomen" href="#" coords="124,239,167,229,264,229,275,241,279,265,265,314,269,360,179,376,134,376,127,369,126,351,130,335,129,292" shape="poly">
+		<area target="" alt="Right Arm" title="Right Arm" data-toggle="modal" data-target="#ArmF" href="#" coords="136,153,112,167,101,188,101,208,103,226,105,236,98,255,97,276,96,291,103,304,117,306,129,304,125,237,115,199" shape="poly">
+		<area target="" alt="Right Forearm" title="Right Forearm" data-toggle="modal" data-target="#ForearmF" href="#" coords="93,292,101,305,128,305,128,328,125,344,81,424,56,414,70,378,77,332" shape="poly">
+		<area target="" alt="Right Hand" title="Right Hand" href="#" coords="58,417,84,427,71,462,57,490,39,497,26,499,16,490,33,457,37,442,20,460,15,455,35,427" shape="poly">
+		<area target="" alt="Left Arm" title="Left Arm" data-toggle="modal" data-target="#ArmF" href="#" coords="273,137,261,153,274,233,286,299,299,298,330,285,331,270,334,237,325,201,321,163,296,139" shape="poly">
+		<area target="" alt="Left Forearm" title="Left Forearm" data-toggle="modal" data-target="#ForearmF" href="#" coords="285,300,333,282,339,303,343,352,345,417,315,416" shape="poly">
+		<area target="" alt="Left Hand" title="Left Hand" href="#" coords="314,418,341,418,350,430,350,453,351,481,345,499,325,507,311,500,303,485,307,457,305,433" shape="poly">
+		<area target="" alt="Pelvic" title="Pelvic" href="#" coords="126,373,165,377,207,374,273,361,283,415,283,458,194,487,114,465" shape="poly">
+		<area target="" alt="Right Thigh" title="Right Thigh" href="#" coords="115,467,195,485,198,543,191,580,195,606,187,636,161,646,138,637,138,608,128,571,119,552,113,535" shape="poly">
+		<area target="" alt="Right Leg" title="Right Leg" href="#" coords="137,638,158,647,187,634,200,697,188,740,189,818,158,817,139,685" shape="poly">
+		<area target="" alt="Right Foot" title="Right Foot" href="#" coords="157,821,190,819,198,845,195,858,167,861,159,879,136,886,124,884,115,874,121,861,142,847" shape="poly">
+		<area target="" alt="Left Thigh" title="Left Thigh" href="#" coords="198,487,282,456,285,499,281,542,269,588,271,626,276,640,249,652,223,654,217,617,206,579,199,543" shape="poly">
+		<area target="" alt="Left Leg" title="Left Leg" href="#" coords="223,654,245,652,275,640,283,656,286,689,277,721,270,756,265,802,264,829,229,824,233,794,230,740,221,691" shape="poly">
+		<area target="" alt="Left Foot" title="Left Foot" href="#" coords="227,823,264,829,266,837,263,847,267,861,264,871,240,895,187,897,190,881,215,855,224,840" shape="poly">
+	</map>
+	<map name="m7">
+		<area target="" alt="Back" title="Back" href="#" coords="106,148,78,174,90,207,103,225,116,262,126,294,131,320,127,361,170,361,223,359,270,367,273,346,267,294,251,250,250,201,266,159,264,131,229,115,155,116" shape="poly">
+		<area target="" alt="Head" title="Head" data-toggle="modal" data-target="#Head" href="#" coords="167,87,229,86,228,102,228,112,234,110,238,96,241,76,241,53,238,33,227,13,207,2,185,1,164,16,156,44,156,66" shape="poly">
+		<area target="" alt="Right Arm" title="Right Arm" data-toggle="modal" data-target="#ArmB" href="#" coords="264,127,266,157,250,201,251,243,267,289,270,302,294,302,309,293,323,280,315,264,307,210,313,174,300,149,283,132" shape="poly">
+		<area target="" alt="Right Forearm" title="Right Forearm" href="#" coords="272,305,295,302,325,280,332,305,339,338,342,360,349,388,360,415,347,424,332,428,301,368,282,336" shape="poly">
+		<area target="" alt="Right Hand" title="Right Hand" href="#" coords="327,427,345,423,358,414,383,432,398,457,389,461,378,446,394,491,393,500,378,506,361,502,346,493,333,457" shape="poly">
+		<area target="" alt="Left Arm" title="Left Arm" data-toggle="modal" data-target="#ArmB" href="#" coords="76,175,87,206,102,226,120,280,112,303,92,307,77,310,69,300,70,273,65,252" shape="poly">
+		<area target="" alt="Left Forearm" title="Left Forearm" href="#" coords="68,298,78,308,112,302,114,316,106,349,93,423,65,423,69,392,64,360" shape="poly">
+		<area target="" alt="Left Hand" title="Left Hand" href="#" coords="67,427,91,425,100,438,102,461,105,485,96,498,74,491,66,475,62,455" shape="poly">
+		<area target="" alt="Hip" title="Hip" href="#" coords="130,361,182,360,225,360,270,366,279,406,283,453,189,473,117,460,115,405" shape="poly">
+		<area target="" alt="Right Thigh" title="Right Thigh" href="#" coords="190,472,283,451,288,488,287,541,280,566,270,590,267,618,261,641,212,645,207,611,207,584,197,541" shape="poly">
+		<area target="" alt="Right Leg" title="Right Leg" href="#" coords="261,640,211,647,196,712,208,765,211,792,210,836,208,858,240,859,244,842,252,768,265,703" shape="poly">
+		<area target="" alt="Right Foot" title="Right Foot" href="#" coords="208,860,240,857,244,844,252,857,268,860,276,867,278,878,269,881,247,887,229,895,207,895,202,885" shape="poly">
+		<area target="" alt="Left Thigh" title="Left Thigh" href="#" coords="116,459,188,474,195,546,190,576,180,605,182,630,173,649,127,630,130,605,127,571,117,539" shape="poly">
+		<area target="" alt="Left Leg" title="Left Leg" href="#" coords="124,628,171,650,173,665,176,685,172,727,166,792,170,830,139,831,131,825,127,766,118,722,111,682,114,655" shape="poly">
+		<area target="" alt="Left Foot" title="Left Foot" href="#" coords="133,827,140,832,168,830,204,851,205,859,190,868,170,868,157,885,137,887,130,877,135,857,130,843" shape="poly">
+	</map>
+	<map name="m8">
+		<area target="" alt="Head" title="Head" data-toggle="modal" data-target="#Head" href="#" coords="165,92,196,83,208,83,231,91,235,80,241,76,244,66,241,53,235,34,228,12,204,2,182,7,165,24,159,50,152,53,155,77,160,76" shape="poly">
+		<area target="" alt="Back" title="Back" href="#" coords="99,140,111,190,119,215,119,248,126,265,129,300,127,330,122,365,161,362,249,362,277,368,275,339,270,315,271,280,281,248,286,233,290,212,296,191,300,144,271,132,249,118,220,110,193,111,160,114,134,130" shape="poly">
+		<area target="" alt="Right Arm" title="Right Arm" data-toggle="modal" data-target="#ArmB" href="#" coords="300,142,294,200,287,238,289,268,294,298,296,311,320,312,331,308,345,293,337,275,339,261,336,228,331,213,334,189,322,158" shape="poly">
+		<area target="" alt="Right Forearm" title="Right Forearm" href="#" coords="293,309,318,313,330,305,343,291,350,312,350,345,354,380,361,417,362,425,330,429,325,406,314,372,300,337" shape="poly">
+		<area target="" alt="Right Hand" title="Right Hand" href="#" coords="330,429,360,425,371,434,375,460,371,496,355,504,340,501,330,491,329,466,324,444" shape="poly">
+		<area target="" alt="Left Arm" title="Left Arm" data-toggle="modal" data-target="#ArmB" href="#" coords="98,143,110,194,118,225,119,248,113,280,107,295,103,306,80,314,70,299,61,276,65,241,70,207,67,178,79,154" shape="poly">
+		<area target="" alt="Left Forearm" title="Left Forearm" href="#" coords="61,279,77,313,104,305,105,322,81,376,62,427,47,427,31,420,41,395,44,354,49,307" shape="poly">
+		<area target="" alt="Left Hand" title="Left Hand" href="#" coords="31,423,44,425,61,426,67,439,59,490,42,501,29,501,12,496,20,461,11,464,18,436" shape="poly">
+		<area target="" alt="Hip" title="Hip" href="#" coords="119,367,198,363,277,367,287,438,286,458,202,480,112,458,113,419" shape="poly">
+		<area target="" alt="Right Thigh" title="Right Thigh" href="#" coords="200,479,289,457,290,505,290,543,283,552,281,579,276,603,273,628,217,635,218,605,212,575,205,545" shape="poly">
+		<area target="" alt="Right Leg" title="Right Leg" href="#" coords="217,634,274,628,278,655,283,688,278,722,270,760,265,802,264,821,264,849,224,841,230,818,230,780,221,738,215,704,223,661" shape="poly">
+		<area target="" alt="Right Foot" title="Right Foot" href="#" coords="222,841,263,850,264,862,267,872,261,885,252,894,236,896,227,890,226,875,217,867,218,856,226,852" shape="poly">
+		<area target="" alt="Left Thigh" title="Left Thigh" href="#" coords="110,458,198,480,196,545,189,548,183,602,183,630,178,649,124,646,126,618,122,599,117,579,111,549,106,546" shape="poly">
+		<area target="" alt="Left Leg" title="Left Leg" href="#" coords="123,646,153,646,176,647,178,663,183,697,184,725,176,754,172,783,172,821,175,845,176,854,138,851,138,834,135,791,125,735,118,687" shape="poly">
+		<area target="" alt="Left Foot" title="Left Foot" href="#" coords="138,851,158,853,174,855,178,895,158,899,140,894,137,886,124,869,138,863" shape="poly">
+	</map>
+	<map name="m9">
+		<area target="" alt="Head" title="Head" data-toggle="modal" data-target="#Head" href="#" coords="170,12,160,29,156,43,155,56,153,69,157,84,160,100,162,111,172,98,181,89,198,85,213,86,227,91,237,77,240,62,239,42,238,27,229,11,209,-1,209,-1,189,2" shape="poly">
+		<area target="" alt="Back" title="Back" href="#" coords="179,102,162,112,137,127,115,130,97,144,128,169,144,190,139,208,141,222,142,238,137,255,130,271,126,287,130,303,130,313,124,330,121,347,123,363,154,357,193,356,219,358,248,358,266,360,269,345,266,314,270,291,279,274,283,254,288,239,293,222,300,206,307,194,304,171,300,151,274,137,259,126,240,112,230,102" shape="poly">
+		<area target="" alt="RIght Arm" title="Right Arm" data-toggle="modal" data-target="#ArmB" href="#" coords="300,148,307,196,293,222,279,270,284,296,286,305,298,312,312,312,325,313,331,305,331,290,330,273,332,257,332,235,328,212,324,193,319,169" shape="poly">
+		<area target="" alt="Right Forearm" title="Right Forearm" href="#" coords="285,302,292,312,326,312,332,299,337,315,336,331,338,360,334,382,337,416,333,426,306,422,305,404,301,373,289,341" shape="poly">
+		<area target="" alt="Right Hand" title="Right Hand" href="#" coords="305,423,329,427,334,432,337,459,335,477,328,492,314,499,303,497,296,485,300,462,299,435" shape="poly">
+		<area target="" alt="Left Arm" title="Left Arm" data-toggle="modal" data-target="#ArmB" href="#" coords="97,144,126,165,143,184,140,200,142,238,132,265,126,287,122,301,94,301,82,286,78,262,86,211,80,179,85,156" shape="poly">
+		<area target="" alt="Left Forearm" title="Left Forearm" href="#" coords="76,265,80,284,93,299,121,295,121,314,112,337,98,360,82,391,64,430,34,416,47,383,55,333,61,298" shape="poly">
+		<area target="" alt="Left Hand" title="Left Hand" href="#" coords="34,416,64,431,65,439,60,463,55,479,49,491,31,502,15,503,-1,496,15,462,14,448,8,459,-1,462,0,455,8,441,16,428,28,424" shape="poly">
+		<area target="" alt="Hip" title="Hip" href="#" coords="124,364,174,356,223,359,268,359,274,378,278,405,281,430,280,454,210,471,110,447" shape="poly">
+		<area target="" alt="Right Thigh" title="Right Thigh" href="#" coords="209,473,280,455,281,484,282,513,282,544,273,580,272,604,273,623,249,635,216,628,213,605,208,586,204,565,204,540" shape="poly">
+		<area target="" alt="Right Leg" title="Right Leg" href="#" coords="216,627,248,635,272,621,277,645,285,672,284,697,280,718,276,742,268,780,264,834,251,833,229,826,232,802,225,725,220,688,224,654" shape="poly">
+		<area target="" alt="Right Foot" title="Right Foot" href="#" coords="227,826,256,835,264,836,267,849,262,859,268,875,264,884,244,888,232,879,224,866,216,869,202,867,193,859,193,850,209,845,224,840" shape="poly">
+		<area target="" alt="Left Thigh" title="Left Thigh" href="#" coords="109,447,208,471,204,544,196,545,193,565,190,580,188,597,189,624,185,648,187,666,163,668,144,666,132,656,130,631,129,601,122,580,111,553,105,542" shape="poly">
+		<area target="" alt="Left Leg" title="Left Leg" href="#" coords="131,656,144,665,168,668,187,665,192,686,196,711,194,735,184,773,184,805,184,831,185,850,178,851,162,845,150,839,140,777,129,696" shape="poly">
+		<area target="" alt="Left Foot" title="Left Foot" href="#" coords="151,841,174,852,184,850,192,878,192,889,188,899,173,898,159,892,149,886,132,882,120,876,120,866,142,858" shape="poly">
+	</map>
+	<map name="w2">
+		<area target="" alt="Head" title="Head" data-toggle="modal" data-target="#Head" href="#" coords="164,19,154,35,151,55,159,83,172,111,180,106,187,103,196,109,212,115,222,117,232,112,238,96,242,82,242,68,244,54,244,39,236,20,220,8,203,4,181,8" shape="poly">
+		<area target="" alt="Chest" title="Chest" href="#" coords="160,140,176,149,208,157,220,161,233,158,245,165,251,182,260,207,271,221,277,229,282,245,278,256,271,264,264,271,256,279,241,272,228,272,208,271,170,272,144,279,147,242,156,202,160,178,164,159,150,146" shape="poly">
+		<area target="" alt="Right Arm" title="Right Arm" data-toggle="modal" data-target="#ArmF" href="#" coords="147,146,162,160,145,242,143,277,137,300,137,311,124,307,102,305,101,290,104,264,107,234,105,203,105,174,124,154" shape="poly">
+		<area target="" alt="Right Forearm" title="Right Forearm" data-toggle="modal" data-target="#ForearmF" href="#" coords="99,305,121,305,137,311,137,323,123,441,124,449,102,447,100,434,100,397,94,357,97,325" shape="poly">
+		<area target="" alt="Right Hand" title="Right Hand" href="#" coords="101,449,125,450,133,465,137,486,145,510,138,520,128,528,110,526,100,483" shape="poly">
+		<area target="" alt="Left Arm" title="Left Arm" data-toggle="modal" data-target="#ArmF" href="#" coords="245,166,265,178,271,196,274,222,281,244,271,267,274,297,269,315,255,318,258,277,279,255,278,231,265,215,255,193" shape="poly">
+		<area target="" alt="Left Hand" title="Left Hand" href="#" coords="277,451,297,445,315,458,335,482,332,488,316,474,313,485,319,494,328,513,319,520,307,516,296,509,285,489,281,473" shape="poly">
+		<area target="" alt="Left Forearm" title="Left Forearm" data-toggle="modal" data-target="#ForearmF" href="#" coords="253,318,270,315,278,331,280,355,281,383,290,419,300,443,278,451,268,383,256,347" shape="poly">
+		<area target="" alt="Abdomen" title="Abdomen" href="#" coords="142,277,175,272,218,271,242,272,258,280,254,325,266,377,246,383,219,380,185,373,155,366,132,365,144,346,143,316,138,295" shape="poly">
+		<area target="" alt="Pelvic" title="Pelvic" href="#" coords="132,363,167,368,201,376,234,381,265,376,271,402,276,436,213,464,122,429" shape="poly">
+		<area target="" alt="Right Thigh" title="Right Thigh" href="#" coords="123,430,206,463,205,487,201,529,196,573,188,601,187,624,180,643,160,642,136,633,140,607,138,573,130,544,125,531,146,515" shape="poly">
+		<area target="" alt="Right Leg" title="Right Leg" href="#" coords="134,632,159,640,179,643,180,693,174,743,170,787,174,819,175,840,144,840,137,835,138,805,134,753,130,712,125,677" shape="poly">
+		<area target="" alt="Right Foot" title="Right Foot" href="#" coords="135,836,142,841,177,840,191,857,204,867,219,886,217,891,197,892,177,892,167,890,145,871,138,865,133,855" shape="poly">
+		<area target="" alt="Left Thigh" title="Left Thigh" href="#" coords="206,462,276,436,279,485,276,513,268,550,258,586,253,609,253,624,248,633,234,636,214,633,203,623,199,605,204,573,199,533" shape="poly">
+		<area target="" alt="Left Leg" title="Left Leg" href="#" coords="203,625,213,633,230,639,247,633,249,655,248,692,246,706,236,753,236,786,234,814,237,825,199,824,203,796,201,759,198,727,191,696,193,664" shape="poly">
+		<area target="" alt="Left Foot" title="Left Foot" href="#" coords="199,824,237,825,249,839,262,852,269,854,278,864,277,871,271,876,260,877,249,873,238,870,227,854,217,854,205,852,196,846,197,835" shape="poly">
+	</map>
+	<map name="w1">
+		<area target="" alt="Head" title="Head" data-toggle="modal" data-target="#Head" href="#" coords="162,30,184,6,217,4,238,31,241,67,234,100,218,112,189,111,164,91,157,55" shape="poly">
+		<area target="" alt="Chest" title="Chest" href="#" coords="141,155,139,207,138,276,202,262,257,271,270,234,262,207,255,174,253,156,238,152,201,160,162,150" shape="poly">
+		<area target="" alt="Right Arm" title="Right Arm" data-toggle="modal" data-target="#ArmF" href="#" coords="141,158,135,217,138,278,135,309,114,321,102,306,106,226,101,192,114,166" shape="poly">
+		<area target="" alt="Left Arm" title="Left Arm" data-toggle="modal" data-target="#ArmF" href="#" coords="253,158,262,209,269,234,262,265,266,313,282,314,297,302,293,236,298,192,278,161" shape="poly">
+		<area target="" alt="Right Forearm" title="Right Forearm" data-toggle="modal" data-target="#ForearmF" href="#" coords="98,319,112,322,133,319,130,355,116,405,103,446,81,443,88,372,88,342" shape="poly">
+		<area target="" alt="Left Forearm" title="Left Forearm" data-toggle="modal" data-target="#ForearmF" href="#" coords="267,315,285,314,303,304,309,342,324,439,297,443,272,351" shape="poly">
+		<area target="" alt="Abdomen" title="Abdomen" href="#" coords="141,282,202,270,258,277,257,327,274,374,202,385,130,371,144,334" shape="poly">
+		<area target="" alt="Pelvic" title="Pelvic" href="#" coords="126,374,202,389,274,373,286,425,212,472,190,472,118,430" shape="poly">
+		<area target="" alt="Right Hand" title="Right Hand" href="#" coords="81,449,102,450,109,472,106,512,81,526,62,522,65,485,54,490,65,462" shape="poly">
+		<area target="" alt="Left Hand" title="Left Hand" href="#" coords="296,446,308,445,324,440,341,461,349,481,338,485,342,512,340,518,321,524,297,505" shape="poly">
+		<area target="" alt="Right Thigh" title="Right Thigh" href="#" coords="120,428,194,473,181,640,133,639,134,593,113,488" shape="poly">
+		<area target="" alt="Left Thigh" title="Left Thigh" href="#" coords="208,476,284,432,286,493,266,594,268,632,250,646,221,637" shape="poly">
+		<area target="" alt="Right Leg" title="Right Leg" href="#" coords="131,637,153,647,181,637,184,684,173,763,176,816,173,828,143,821,143,764,129,705" shape="poly">
+		<area target="" alt="Left Leg" title="Left Leg" href="#" coords="219,637,240,646,263,633,269,677,261,730,259,770,253,808,256,837,225,833,225,769,213,684" shape="poly">
+		<area target="" alt="Right Foot" title="Right Foot" href="#" coords="144,823,175,829,175,851,177,874,173,890,153,887,132,881,142,847" shape="poly">
+		<area target="" alt="Left Foot" title="Left Foot" href="#" coords="228,831,252,831,268,879,227,894,223,856,220,842" shape="poly">
+	</map>
+	<map name="w13">
+		<area target="" alt="Head" title="Head" data-toggle="modal" data-target="#Head" href="#" coords="156,33,166,15,185,4,206,1,228,10,242,23,248,41,249,61,240,83,225,106,212,105,195,114,178,110,164,96,158,66,155,50" shape="poly">
+		<area target="" alt="Chest" title="Chest" href="#" coords="147,161,161,152,174,147,200,156,222,146,239,146,244,141,253,145,263,148,247,158,244,171,252,188,255,197,256,205,257,214,259,222,259,236,260,251,263,274,259,279,229,268,190,265,157,268,137,276,133,265,126,258,120,243,122,227,132,213,141,196,145,174" shape="poly">
+		<area target="" alt="Abdomen" title="Abdomen" href="#" coords="139,278,154,270,174,268,200,268,231,270,259,280,258,292,255,314,255,332,263,348,270,366,242,367,216,374,176,378,137,376,130,368,134,353,139,339,143,319,143,298" shape="poly">
+		<area target="" alt="Right Arm" title="Right Arm" data-toggle="modal" data-target="#ArmF" href="#" coords="148,158,129,169,116,190,116,220,116,250,112,288,114,310,123,314,143,310,136,266,124,258,120,234,130,216,140,198" shape="poly">
+		<area target="" alt="Right Forearm" title="Right Forearm" data-toggle="modal" data-target="#ForearmF" href="#" coords="114,310,124,312,142,310,140,339,130,367,124,400,116,427,112,448,86,441,92,418,100,395,104,368,104,340" shape="poly">
+		<area target="" alt="Right Hand" title="Right Hand" href="#" coords="85,439,110,449,111,464,107,483,105,495,96,507,85,516,72,520,60,513,74,469,67,474,57,481,54,476,68,460,79,447" shape="poly">
+		<area target="" alt="Left Arm" title="Left Arm" data-toggle="modal" data-target="#ArmF" href="#" coords="264,148,248,160,244,170,256,196,259,212,260,238,264,275,268,291,268,304,280,307,303,300,303,280,300,257,299,226,302,193,296,169,284,156" shape="poly">
+		<area target="" alt="Left Forearm" title="Left Forearm" data-toggle="modal" data-target="#ForearmF" href="#" coords="268,304,276,306,304,299,305,312,309,320,312,334,312,363,310,396,314,425,313,443,288,442,286,419,284,391,276,366,267,334" shape="poly">
+		<area target="" alt="Left Hand" title="Left Hand" href="#" coords="288,442,312,443,320,458,323,488,313,520,296,526,284,520,275,505,280,471" shape="poly">
+		<area target="" alt="Pelvic" title="Pelvic" href="#" coords="129,368,140,379,191,378,244,368,271,367,278,389,283,434,199,464,118,441,117,425" shape="poly">
+		<area target="" alt="Right Thigh" title="Right Thigh" href="#" coords="117,441,196,463,196,487,190,574,192,602,189,626,174,631,156,631,142,626,141,604,138,586,133,572,124,534,115,480" shape="poly">
+		<area target="" alt="Right Leg" title="Right Leg" href="#" coords="143,626,156,630,175,633,190,626,195,649,201,674,201,695,194,724,191,755,188,795,191,821,159,817,160,799,154,750,146,706,141,663" shape="poly">
+		<area target="" alt="Right Foot" title="Right Foot" href="#" coords="156,816,188,821,193,836,188,851,173,852,166,865,152,878,140,879,126,871,124,860,138,847,152,832" shape="poly">
+		<area target="" alt="Left Thigh" title="Left Thigh" href="#" coords="199,464,200,485,203,508,206,530,211,558,212,582,216,606,220,625,230,634,249,634,268,623,267,598,264,580,269,565,276,530,279,515,274,509,284,450,284,435" shape="poly">
+		<area target="" alt="Left Leg" title="Left Leg" href="#" coords="221,626,227,634,247,634,266,625,272,645,275,668,277,688,271,715,268,734,264,756,262,782,260,821,247,823,231,822,228,812,232,788,228,744,224,700,220,686,222,653" shape="poly">
+		<area target="" alt="Left Foot" title="Left Foot" href="#" coords="226,823,260,820,263,828,262,841,261,852,257,862,251,874,248,880,237,886,223,888,207,889,199,887,200,872,207,863,219,851,228,832" shape="poly">
+	</map>
+	<map name="w6">
+		<area target="" alt="Head" title="Head" data-toggle="modal" data-target="#Head" href="#" coords="178,2,159,17,152,33,148,52,156,74,165,91,172,104,184,98,209,102,215,110,220,122,226,123,232,115,236,101,242,82,243,73,246,62,246,46,237,24,220,8,201,0" shape="poly">
+		<area target="" alt="Back" title="Back" href="#" coords="169,124,188,128,221,126,233,134,241,138,241,156,239,180,238,194,238,206,238,224,240,248,240,271,244,292,246,312,249,334,256,360,223,361,182,366,164,369,139,366,130,367,145,340,145,312,140,290,136,276,131,238,126,212,130,188,131,167,135,155,154,142" shape="poly">
+		<area target="" alt="Right Arm" title="Right Arm" data-toggle="modal" data-target="#ArmB" href="#" coords="241,140,240,175,238,200,237,233,240,272,244,300,249,322,288,310,284,296,283,271,281,237,280,213,283,181,279,159,260,145" shape="poly">
+		<area target="" alt="Right Forearm" title="Right Forearm" href="#" coords="246,324,290,309,296,329,293,348,297,377,301,396,306,418,313,436,315,444,288,449,285,442,280,422,270,392,255,360" shape="poly">
+		<area target="" alt="Right Hand" title="Right Hand" href="#" coords="287,449,315,444,334,460,343,475,349,484,339,482,331,470,328,477,333,488,340,511,343,517,335,520,324,520,313,515,301,508,293,490,288,470" shape="poly">
+		<area target="" alt="Left Arm" title="Left Arm" data-toggle="modal" data-target="#ArmB" href="#" coords="137,158,117,171,109,190,107,212,108,242,107,278,105,310,100,337,108,338,121,336,135,334,141,330,139,294,135,275,130,238,124,214" shape="poly">
+		<area target="" alt="Left Forearm" title="Left Forearm" href="#" coords="98,336,137,335,138,344,133,357,128,374,124,400,118,422,116,444,106,444" shape="poly">
+		<area target="" alt="Left Hand" title="Left Hand" href="#" coords="109,444,117,444,120,468,121,483,126,503,121,510,112,498,108,480,106,464" shape="poly">
+		<area target="" alt="Hip" title="Hip" href="#" coords="129,366,170,369,224,360,256,362,265,389,279,418,283,432,282,454,280,465,202,475,189,466,183,467,163,475,138,472,119,465,116,432" shape="poly">
+		<area target="" alt="Right Thigh" title="Right Thigh" href="#" coords="203,476,280,465,282,478,278,493,279,513,273,538,270,561,265,585,260,605,256,623,256,644,241,641,217,637,206,633,204,610,204,580,203,547,199,510" shape="poly">
+		<area target="" alt="Right Leg" title="Right Leg" href="#" coords="204,633,255,645,256,661,256,685,252,710,248,737,245,765,242,793,240,817,240,834,227,838,209,836,205,821,208,797,203,757,198,721,193,689,203,653" shape="poly">
+		<area target="" alt="Right Foot" title="Right Foot" href="#" coords="206,835,242,836,255,843,268,849,275,859,272,867,252,871,231,877,218,882,203,878,200,865" shape="poly">
+		<area target="" alt="Left Thigh" title="Left Thigh" href="#" coords="120,467,152,477,188,465,201,474,200,489,197,515,196,546,193,568,187,597,183,621,177,633,152,633,136,622,139,591,140,564,127,515" shape="poly">
+		<area target="" alt="Left Leg" title="Left Leg" href="#" coords="136,623,149,631,180,633,179,648,179,677,177,701,170,740,169,771,172,797,174,819,160,830,140,823,138,791,135,751,130,711,126,677,127,649" shape="poly">
+		<area target="" alt="Left Foot" title="Left Foot" href="#" coords="136,823,158,830,173,819,188,831,204,836,203,851,186,852,173,853,161,866,144,868,133,855,140,839" shape="poly">
+	</map>
+	<map name="w7">
+		<area target="" alt="Head" title="Head" data-toggle="modal" data-target="#Head" href="#" coords="156,63,152,43,159,22,172,6,185,2,213,0,231,11,239,24,244,39,241,60,238,74,235,86,231,102,223,114,196,110,177,110,166,94" shape="poly">
+		<area target="" alt="Back" title="Back" href="#" coords="136,149,167,130,231,130,264,148,264,204,263,257,260,282,257,307,257,329,267,345,270,362,253,364,218,367,192,366,165,367,146,364,128,362,140,342,144,302,140,279,135,242,129,206" shape="poly">
+		<area target="" alt="Right Arm" title="Right Arm" data-toggle="modal" data-target="#ArmB" href="#" coords="265,148,265,201,262,282,268,326,270,334,284,334,296,330,309,321,303,303,302,278,297,242,300,218,302,194,297,169,283,154" shape="poly">
+		<area target="" alt="Right Forearm" title="Right Forearm" href="#" coords="268,334,281,335,296,332,310,321,312,341,313,364,316,406,323,439,322,444,308,444,297,445,294,419,280,380" shape="poly">
+		<area target="" alt="Right Hand" title="Right Hand" href="#" coords="297,445,322,442,334,458,345,482,339,487,337,513,332,518,319,518,307,512,296,505,293,479" shape="poly">
+		<area target="" alt="Left Arm" title="Left Arm" data-toggle="modal" data-target="#ArmB" href="#" coords="134,148,118,158,101,176,99,204,101,232,100,275,94,307,92,316,104,334,120,333,132,326,131,300,134,254,132,204" shape="poly">
+		<area target="" alt="Left Forearm" title="Left Forearm" href="#" coords="89,315,105,334,117,334,129,326,129,338,124,359,120,372,114,399,105,444,81,444,87,396,86,358" shape="poly">
+		<area target="" alt="Left Hand" title="Left Hand" href="#" coords="80,443,104,446,112,460,112,479,115,498,110,508,92,518,76,510,71,480,74,456" shape="poly">
+		<area target="" alt="Hip" title="Hip" href="#" coords="128,364,192,365,272,363,280,392,284,423,287,447,285,465,244,476,208,471,199,458,195,471,168,477,140,473,114,453,119,402" shape="poly">
+		<area target="" alt="Right Thigh" title="Right Thigh" href="#" coords="204,472,242,475,285,467,286,483,284,513,278,536,273,563,266,584,268,601,268,616,248,619,217,611,214,593,214,564,209,516" shape="poly">
+		<area target="" alt="Right Leg" title="Right Leg" href="#" coords="216,613,246,618,268,615,269,639,271,666,272,688,268,723,261,744,257,771,256,796,253,826,254,838,241,839,227,838,221,831,224,802,221,758,212,703,211,685,218,647" shape="poly">
+		<area target="" alt="Right Foot" title="Right Foot" href="#" coords="221,834,231,841,254,838,269,850,269,856,245,875,230,878,221,864,224,847" shape="poly">
+		<area target="" alt="Left Thigh" title="Left Thigh" href="#" coords="114,456,140,472,168,479,193,473,193,492,192,509,188,537,184,571,184,600,182,620,180,629,162,631,143,628,132,617,134,582,125,546,116,504" shape="poly">
+		<area target="" alt="Left Leg" title="Left Leg" href="#" coords="131,619,143,629,164,630,180,626,180,641,180,657,184,673,183,690,181,705,179,719,177,731,176,743,170,771,170,794,172,807,173,826,174,833,162,841,148,836,142,829,141,813,140,778,135,742,126,697,126,661" shape="poly">
+		<area target="" alt="Left Foot" title="Left Foot" href="#" coords="140,827,150,839,161,842,172,832,177,836,184,840,185,846,180,853,171,855,171,862,168,870,158,876,148,876,140,864,138,851" shape="poly">
+	</map>
+	<map name="w8">
+		<area target="" alt="Head" title="Head" data-toggle="modal" data-target="#Head" href="#" coords="159,43,164,23,176,5,196,0,215,1,233,11,240,19,247,37,249,53,244,70,238,81,229,97,225,109,210,108,193,106,179,106,180,118,180,124,170,113,166,97,160,68" shape="poly">
+		<area target="" alt="Back" title="Back" href="#" coords="180,124,212,127,232,128,247,141,260,150,268,170,272,193,275,210,271,226,269,242,268,260,264,276,260,286,258,310,257,331,260,350,269,364,260,366,242,367,228,367,201,368,173,364,148,362,130,366,142,330,143,305,148,273,148,238,149,202,154,140" shape="poly">
+		<area target="" alt="Right Arm" title="Right Arm" data-toggle="modal" data-target="#ArmB" href="#" coords="261,151,270,171,276,213,269,243,265,269,262,283,269,303,269,319,268,329,277,336,291,340,298,331,307,322,301,290,298,252,300,207,300,185,288,167,276,155" shape="poly">
+		<area target="" alt="Right Forearm" title="Right Forearm" href="#" coords="268,330,280,338,292,341,298,333,307,325,311,337,311,352,310,366,308,381,307,406,308,432,308,450,286,449,286,431,278,383,270,349" shape="poly">
+		<area target="" alt="Right Hand" title="Right Hand" href="#" coords="284,448,308,450,313,462,309,478,311,494,304,514,289,515,280,510,286,481" shape="poly">
+		<area target="" alt="Left Arm" title="Left Arm" data-toggle="modal" data-target="#ArmB" href="#" coords="155,141,149,199,147,245,148,277,140,309,143,323,138,336,122,329,102,316,101,307,106,290,106,268,108,244,109,215,107,190,111,167,125,151,140,146" shape="poly">
+		<area target="" alt="Left Forearm" title="Left Forearm" href="#" coords="98,314,120,328,140,336,105,448,78,441,88,402" shape="poly">
+		<area target="" alt="Left Hand" title="Left Hand" href="#" coords="77,442,104,448,106,462,104,482,104,494,97,506,87,514,72,521,56,517,64,472,56,482,49,482,64,458" shape="poly">
+		<area target="" alt="Hip" title="Hip" href="#" coords="130,364,150,361,212,367,268,365,274,377,276,391,279,413,284,438,284,469,253,477,228,478,205,469,196,471,184,479,173,476,148,473,128,467,113,462,119,405" shape="poly">
+		<area target="" alt="Right Thigh" title="Right Thigh" href="#" coords="202,469,224,477,248,477,283,469,286,484,274,536,268,559,264,582,266,602,268,612,250,621,224,620,218,605" shape="poly">
+		<area target="" alt="Right Leg" title="Right Leg" href="#" coords="218,617,251,622,266,613,270,636,276,653,277,676,276,697,271,718,265,748,264,773,261,801,262,825,248,830,227,821,232,797,224,715,219,689,221,668,224,656" shape="poly">
+		<area target="" alt="Right Foot" title="Right Foot" href="#" coords="227,821,248,829,262,825,264,836,261,855,261,865,253,873,237,867,229,857,223,852,215,853,208,850,201,841,210,835,222,833" shape="poly">
+		<area target="" alt="Left Thigh" title="Left Thigh" href="#" coords="113,462,155,473,184,478,195,472,194,488,194,504,190,528,191,549,190,572,192,594,192,608,188,628,188,638,166,638,151,637,138,631,136,590,126,565,118,506" shape="poly">
+		<area target="" alt="Left Leg" title="Left Leg" href="#" coords="137,631,149,638,188,637,190,660,193,671,196,685,196,694,193,712,192,740,187,770,185,814,184,836,183,846,169,849,152,845,152,820,151,802,148,754,137,710,137,670" shape="poly">
+		<area target="" alt="Left Foot" title="Left Foot" href="#" coords="150,838,155,844,172,848,184,843,188,862,188,873,176,880,160,878,152,870,136,865,125,859,132,850,141,846" shape="poly">
+	</map>
+	<!-- MODALS -->
+	<!-- Trigger the modal with a button -->
+	<div id="tutorial" class="modal fade" role="dialog" data-backdrop="static">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div id="tutorial_content" class="modal-content tutorial_main">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" style="color: #000;">&times;</button>
+			<h4 class="modal-title"><b>Module Tutorial</b></h4>
+		  </div>
+		  <div class="modal-body">
+		  	<p id="tut-title" class="">Would you like a tutorial?</p>
+		  	<p id="tut-vid" class="hidden">Click and drag in the blank area to rotate the body.</p>
+		  </div>
+		  <div class="modal-footer">
+       		<button id="tut-y" type="button" class="btn btn-default">Yes</button>
+        	<button id="tut-n" type="button" class="btn btn-default" data-dismiss="modal">No</button>
+		  </div>
+		</div>
+
+	  </div>
+	</div>
+	<div id="Head" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content popups">
+		  <div class="modal-header">
+		  	<span class="glyphicon glyphicon-menu-left modal-back" title="Back"></span>
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">Vital Parts Of The Head</h4>
+		  </div>
+		  <div class="modal-body">
+			<div class="row">
+				<div id="skull" class="hidden">
+					<img src="images/Human Body/Head/skull1.png" style="height: 300px; padding: 2% 3% 0 2%;" align="left">
+					<p id="skull-description" class="description">The human skull is the bony structure that forms the head in the human skeleton. It supports the structures of the face and forms a cavity for the brain.<br><br>It consists of two parts:<br>• The cranium<br>• The mandible<br><br>The upper areas of the cranial bones form the skullcap. The neurocranium includes the mandible.</p>
+				</div>
+				<div id="brain" class="hidden">
+					<img src="images/Human Body/Head/brain1.png" style="height: 320px; padding: 2% 3% 0 2%;" align="left">
+					<p id="Brain-description" class="description">The brain is one of the largest and most complex organs in the human body. It is made up of more than 100 billion nerves that communicate in trillions of connections called synapses.<br><br>It consists of 4 Lobes:<br>• The frontal lobes are responsible for problem solving and judgment and motor function.<br>• The parietal lobes manage sensation, handwriting, and body position.<br>• The temporal lobes are involved with memory and hearing.<br>• The occipital lobes contain the brain's visual processing system.</p>
+				</div>
+				<div class="col-md-6 parts"><img id="half-skull" src="images/Human Body/Head/skull2.png" class="img-responsive" align="right"></div>
+				<div class="col-md-6 parts"><img id="half-brain" src="images/Human Body/Head/brain2.png" class="img-responsive"></div>
+			</div>
+		  </div>
+		</div>
+
+	  </div>
+	</div>
+	<div id="ArmF" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content popups">
+		  <div class="modal-header">
+		  	<span class="glyphicon glyphicon-menu-left modal-back" title="Back"></span>
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">Vital Parts Of The Arm (Anterior)</h4>
+		  </div>
+		  <div class="modal-body">
+			<div class="row">
+				<div id="humerus-a" class="hidden">
+					<img src="images/Human Body/Arm/humerus-a.png" style="height: 400px; padding: 2% 2% 0 2%;" align="left">
+					<p class="description">The humerus is one of the three long bones of the human arm. It joins with the scapula at the shoulder joint and with the other long bones of the arm, the ulna and radius at the elbow joint.The elbow is the hinge joint between the end of the humerus and the ends of the radius and ulna.<br><br>The humerus is a long bone in the arm or forelimb that runs from the shoulder to the elbow.<br>The humeral upper extremity consists of a rounded head, a narrow neck, and two short processes (tubercles). The lower extremity consists of 2 epicondyles, 2 processes (trochlea & capitulum), and 3 fossae (radial fossa, coronoid fossa, and olecranon fossa).<br><br>As well as its true anatomical neck, the constriction below the greater and lesser tubercles of the humerus is referred to as its surgical neck due to its tendency to fracture, thus often becoming the focus of surgeons.</p>
+				</div>
+				<div id="biceps" class="hidden">
+					<img src="images/Human Body/Arm/biceps.png" style="height: 350px; padding: 2% 5% 0 4%;" align="left">
+					<p class="description"><br>There are three muscles located in the anterior compartment of the upper arm – biceps brachii, coracobrachialis and brachialis.<br><br><b>• Biceps:</b> It is a two-headed muscle. Although the majority of the muscle mass is located anteriorly to the humerus, it has no attachment to the bone itself.<br><br><b>• Coracobrachialis:</b> The coracobrachialis muscle lies deep to the biceps brachii in the arm.<br><br><b>• Brachialis:</b> The brachialis muscle lies deep to the biceps brachii, and is found more distally than the other muscles of the arm. It forms the floor of the cubital fossa.</p>
+				</div>
+				<div class="col-md-6 parts"><img id="half-humerus-a" src="images/Human Body/Head/skull2.png" class="img-responsive" align="right"></div>
+				<div class="col-md-6 parts"><img id="half-biceps" src="images/Human Body/Head/brain2.png" class="img-responsive"></div>
+			</div>
+		  </div>
+		</div>
+
+	  </div>
+	</div>
+	<div id="ForearmF" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content popups">
+		  <div class="modal-header">
+		  	<span class="glyphicon glyphicon-menu-left modal-back" title="Back"></span>
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">Vital Parts Of The Arm (Anterior)</h4>
+		  </div>
+		  <div class="modal-body">
+			<div class="row">
+				<div id="radius-ulna-a" class="hidden">
+					<img src="images/Human Body/Arm/radius-ulna-a.png" style="height: 500px; padding: 2% 2% 0 2%;" align="left">
+					<p class="description">The forearm is the region of the upper limb between the elbow and the wrist. It contains two long bones, the radius and the ulna, forming the radioulnar joint.<br>The interosseous membrane connects these bones. Ultimately, the forearm is covered by skin, the anterior surface usually being less hairy than the posterior surface.<br><br>The <b>radius or radial bone</b> is one of the two large bones of the forearm, the other being the ulna. It extends from the lateral side of the elbow to the thumb side of the wrist and runs parallel to the ulna. The radius is shorter and smaller than the ulna. It is a long bone, prism-shaped and slightly curved longitudinally.<br><br>The <b>ulna</b> stretches from the elbow to the smallest finger, and when in anatomical position, is found on the medial side of the forearm. It runs parallel to the radius, the other long bone in the forearm, and is the larger and longer of the two.</p>
+				</div>
+				<div id="forearm-muscles-a" class="hidden">
+					<img src="images/Human Body/Arm/forearm-muscles-a.png" style="height: 350px; padding: 2% 3% 0 1%;" align="left">
+					<p class="description">The forearm contains many muscles, including a flexor of the elbow (brachioradialis), and pronators and supinators that turn the hand to face down or upwards, respectively. In the anterior compartment, they are split into two categories; superficial and deep.<br><br><b>• Brachioradialis:</b> is a muscle of the forearm that flexes the forearm at the elbow. It is also capable of both pronation and supination, depending on the position of the forearm.<br><br><b>• Superficial Muscles:</b> the flexor carpi ulnaris, palmaris longus, flexor carpi radialis and pronator teres.  They all originate from a common tendon.<br><br><b>• Deep Muscles:</b> flexor digitorum profundus, flexor pollicis longus, and pronator quadratus.</p>
+				</div>
+				<div class="col-md-6 parts"><img id="half-radius-ulna-a" src="images/Human Body/Head/skull2.png" class="img-responsive" align="right"></div>
+				<div class="col-md-6 parts"><img id="half-forearm-muscles-a" src="images/Human Body/Head/brain2.png" class="img-responsive"></div>
+			</div>
+		  </div>
+		</div>
+
+	  </div>
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/360mode.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="js/humanbody.js"></script>
+	<script>
+		$(document).ready( function() {
+			$("#Body").interactive_3d({
+				frames: 13
+			});
+			tutorial();
+		});
+		
+	</script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+Jupiter is the largest planet in the solar system. Jupiter's stripes and swirls are cold, windy clouds of ammonia and water. The atmosphere is mostly hydrogen and helium, and its iconic Great Red Spot is a giant storm bigger than Earth that has raged for hundreds of years. 
+
+Jupiter is surrounded by more than 50 moons. Jupiter also has three rings, but they are very hard to see and not nearly as intricate as Saturn's. 
+<br><br>
+Jupiter is named for the king of ancient Roman gods.
+<br><br><br>
+<a href="https://solarsystem.nasa.gov/planets/jupiter"><p id="more" class="text-uppercase">Learn More</p></a>
